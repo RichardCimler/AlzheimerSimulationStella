@@ -1,0 +1,1565 @@
+AD065(t) = AD065(t - dt) + (InflowAD65 - DeathAD65 - AgeingAD065) * dt
+INIT AD065 = 0
+INFLOWS:
+InflowAD65 = Age065*PrevalenceRate65/100
+OUTFLOWS:
+DeathAD65 = (AD065*DiseaseDeathRate_65)
+AgeingAD065 = (AD065-DeathAD65)
+AD066(t) = AD066(t - dt) + (AgeingAD065 + InflowAD66 - DeathAD66 - AgeingAD066) * dt
+INIT AD066 = (Age066*K_66)+(AD065-DeathAD65)
+INFLOWS:
+AgeingAD065 = (AD065-DeathAD65)
+InflowAD66 = Age066*K_66
+OUTFLOWS:
+DeathAD66 = (AD066*DiseaseDeathRate_66)
+AgeingAD066 = (AD066-DeathAD66)
+AD067(t) = AD067(t - dt) + (AgeingAD066 + InflowAD67 - DeathAD67 - AgeingAD_67) * dt
+INIT AD067 = (AD066-DeathAD66) +(Age067*K_67)
+INFLOWS:
+AgeingAD066 = (AD066-DeathAD66)
+InflowAD67 = Age067*K_67
+OUTFLOWS:
+DeathAD67 = (AD067*DiseaseDeathRate_67)
+AgeingAD_67 = (AD067-DeathAD67)
+AD068(t) = AD068(t - dt) + (AgeingAD_67 + InflowAD68 - DeathAD68 - AgeingAD_68) * dt
+INIT AD068 = (AD067-DeathAD67)+(Age068*K_68)
+INFLOWS:
+AgeingAD_67 = (AD067-DeathAD67)
+InflowAD68 = Age068*K_68
+OUTFLOWS:
+DeathAD68 = (AD068*DiseaseDeathRate_68)
+AgeingAD_68 = (AD068-DeathAD68)
+AD069(t) = AD069(t - dt) + (AgeingAD_68 + InflowAD69 - DeathAD69 - AgeingAD_69) * dt
+INIT AD069 = (AD068-DeathAD68)+ (Age069*K_69)
+INFLOWS:
+AgeingAD_68 = (AD068-DeathAD68)
+InflowAD69 = Age069*K_69
+OUTFLOWS:
+DeathAD69 = (AD069*DiseaseDeathRate_69)
+AgeingAD_69 = (AD069-DeathAD69)
+AD070(t) = AD070(t - dt) + (AgeingAD_69 + InflowAD70 - DeathAD70 - AgeingAD_70) * dt
+INIT AD070 = (AD069-DeathAD69)+(Age070*K_70)
+INFLOWS:
+AgeingAD_69 = (AD069-DeathAD69)
+InflowAD70 = Age070*K_70
+OUTFLOWS:
+DeathAD70 = (AD070*DiseaseDeathRate_70)
+AgeingAD_70 = (AD070-DeathAD70)
+AD071(t) = AD071(t - dt) + (AgeingAD_70 + InflowAD71 - DeathAD71 - AgeingAD_71) * dt
+INIT AD071 = (AD070-DeathAD70)+(Age071*K_71)
+INFLOWS:
+AgeingAD_70 = (AD070-DeathAD70)
+InflowAD71 = Age071*K_71
+OUTFLOWS:
+DeathAD71 = (AD071*DiseaseDeathRate_71)
+AgeingAD_71 = (AD071-DeathAD71)
+AD072(t) = AD072(t - dt) + (AgeingAD_71 + InflowAD72 - DeathAD72 - AgeingAD_72) * dt
+INIT AD072 = (AD071-DeathAD71)+((Age072-AgeingAD_71)*PrevalenceRate72/100)
+INFLOWS:
+AgeingAD_71 = (AD071-DeathAD71)
+InflowAD72 = Age072*K_72
+OUTFLOWS:
+DeathAD72 = (AD072*DiseaseDeathRate_72)
+AgeingAD_72 = (AD072-DeathAD72)
+AD073(t) = AD073(t - dt) + (AgeingAD_72 + InflowAD73 - DeathAD73 - AgeingAD_73) * dt
+INIT AD073 = (AD072-DeathAD72)+(Age073*K_73)
+INFLOWS:
+AgeingAD_72 = (AD072-DeathAD72)
+InflowAD73 = Age073*K_73
+OUTFLOWS:
+DeathAD73 = (AD073*DiseaseDeathRate_73)
+AgeingAD_73 = (AD073-DeathAD73)
+AD074(t) = AD074(t - dt) + (AgeingAD_73 + InflowAD74 - DeathAD74 - AgingAD_74) * dt
+INIT AD074 = (AD073-DeathAD73)+((Age074-AgeingAD_73)*PrevalenceRate74/100)
+INFLOWS:
+AgeingAD_73 = (AD073-DeathAD73)
+InflowAD74 = Age074*K_74
+OUTFLOWS:
+DeathAD74 = (AD074*DiseaseDeathRate_74)
+AgingAD_74 = (AD074-DeathAD74)
+AD075(t) = AD075(t - dt) + (AgingAD_74 + InflowAD75 - DeathAD75 - AgeingAD_75) * dt
+INIT AD075 = (AD074-DeathAD74)+(Age075*K_75)
+INFLOWS:
+AgingAD_74 = (AD074-DeathAD74)
+InflowAD75 = Age075*K_75
+
+OUTFLOWS:
+DeathAD75 = (AD075*DiseaseDeathRate_75)
+AgeingAD_75 = (AD075-DeathAD75)
+AD076(t) = AD076(t - dt) + (AgeingAD_75 + InflowAD76 - DeathAD76 - AgeingAD_76) * dt
+INIT AD076 = (AD075-DeathAD75)+(Age76*K_76)
+INFLOWS:
+AgeingAD_75 = (AD075-DeathAD75)
+InflowAD76 = Age76*K_76
+OUTFLOWS:
+DeathAD76 = (AD076*DiseaseDeathRate_76)
+AgeingAD_76 = (AD076-DeathAD76)
+AD077(t) = AD077(t - dt) + (AgeingAD_76 + InflowAD77 - DeathAD77 - AgeingAD_77) * dt
+INIT AD077 = (AD076-DeathAD76)+((Age76-AgeingAD_75)*PrevalenceRate076/100)
+INFLOWS:
+AgeingAD_76 = (AD076-DeathAD76)
+InflowAD77 = Age077*K_77
+
+OUTFLOWS:
+DeathAD77 = (AD077*DiseaseDeathRate_77)
+AgeingAD_77 = (AD077-DeathAD77)
+AD078(t) = AD078(t - dt) + (AgeingAD_77 + InflowAD78 - DeathAD78 - AgeingAD_78) * dt
+INIT AD078 = (AD077-DeathAD77)+(Age078*K_78)
+INFLOWS:
+AgeingAD_77 = (AD077-DeathAD77)
+InflowAD78 = Age078*K_78
+OUTFLOWS:
+DeathAD78 = (AD078*DiseaseDeathRate_78)
+AgeingAD_78 = (AD078-DeathAD78)
+AD079(t) = AD079(t - dt) + (AgeingAD_78 + inflowAD79 - DeathAD79 - AgeingAD_79) * dt
+INIT AD079 = (AD078-DeathAD78)+(Age079*K_79)
+INFLOWS:
+AgeingAD_78 = (AD078-DeathAD78)
+inflowAD79 = Age079*K_79
+OUTFLOWS:
+DeathAD79 = (AD079*DiseaseDeathRate_79)
+AgeingAD_79 = (AD079-DeathAD79)
+AD080(t) = AD080(t - dt) + (AgeingAD_79 + InflowAD80 - DeathAD80 - AgeingAD_80) * dt
+INIT AD080 = (AD079-DeathAD79)+(Age080*K_80)
+INFLOWS:
+AgeingAD_79 = (AD079-DeathAD79)
+InflowAD80 = Age080*K_80
+OUTFLOWS:
+DeathAD80 = (AD080*DiseaseDeathRate_80)
+AgeingAD_80 = (AD080-DeathAD80)
+AD081(t) = AD081(t - dt) + (AgeingAD_80 + InflowAD81 - DeathAD81 - AgeingAD_81) * dt
+INIT AD081 = (AD080-DeathAD80)+(Age081*K_81)
+INFLOWS:
+AgeingAD_80 = (AD080-DeathAD80)
+InflowAD81 = Age081*K_81
+OUTFLOWS:
+DeathAD81 = (AD081*DiseaseDeathRate_81)
+AgeingAD_81 = (AD081-DeathAD81)
+AD082(t) = AD082(t - dt) + (AgeingAD_81 + InflowAD82 - DeathAD82 - AgeingAD_82) * dt
+INIT AD082 = (AD081-DeathAD81)+(Age082*K_82)
+INFLOWS:
+AgeingAD_81 = (AD081-DeathAD81)
+InflowAD82 = Age082*K_82
+OUTFLOWS:
+DeathAD82 = (AD082*DiseaseDeathRate_82)
+AgeingAD_82 = (AD082-DeathAD82)
+AD083(t) = AD083(t - dt) + (AgeingAD_82 + InflowAD83 - DeathAD83 - AgeingAD_83) * dt
+INIT AD083 = (AD082-DeathAD82)+((Age083*K_83))
+INFLOWS:
+AgeingAD_82 = (AD082-DeathAD82)
+InflowAD83 = Age083*K_83
+OUTFLOWS:
+DeathAD83 = (AD083*DiseaseDeathRate_83)
+AgeingAD_83 = (AD083-DeathAD83)
+AD084(t) = AD084(t - dt) + (AgeingAD_83 + InflowAD84 - DeathAD84 - AgeingAD_84) * dt
+INIT AD084 = (AD083-DeathAD83)+(Age084*K_84
+)
+INFLOWS:
+AgeingAD_83 = (AD083-DeathAD83)
+InflowAD84 = Age084*K_84
+
+OUTFLOWS:
+DeathAD84 = (AD084*DiseaseDeathRate_84)
+AgeingAD_84 = (AD084-DeathAD84)
+AD085(t) = AD085(t - dt) + (AgeingAD_84 + InflowAD85 - DeathAD85 - AgeingAD_85) * dt
+INIT AD085 = (AD084-DeathAD84)+(Age085*K_85)
+INFLOWS:
+AgeingAD_84 = (AD084-DeathAD84)
+InflowAD85 = Age085*K_85
+OUTFLOWS:
+DeathAD85 = (AD085*DiseaseDeathRate_85)
+AgeingAD_85 = (AD085-DeathAD85)
+AD086(t) = AD086(t - dt) + (AgeingAD_85 + InflowAD86 - DeathAD86 - AgeingAD_86) * dt
+INIT AD086 = (AD085-DeathAD85)+(Age086*K_86)
+INFLOWS:
+AgeingAD_85 = (AD085-DeathAD85)
+InflowAD86 = Age086*K_86
+OUTFLOWS:
+DeathAD86 = (AD086*DiseaseDeathRate_86)
+AgeingAD_86 = (AD086-DeathAD86)
+AD087(t) = AD087(t - dt) + (AgeingAD_86 + InflowAD87 - DeathAD87 - AgeingAD_87) * dt
+INIT AD087 = (AD086-DeathAD86)+(Age087*K_87)
+INFLOWS:
+AgeingAD_86 = (AD086-DeathAD86)
+InflowAD87 = Age087*K_87
+OUTFLOWS:
+DeathAD87 = (AD087*DiseaseDeathRate_87)
+AgeingAD_87 = (AD087-DeathAD87)
+AD088(t) = AD088(t - dt) + (AgeingAD_87 + InflowAD88 - DeathAD88 - AgeingAD_88) * dt
+INIT AD088 = (AD087-DeathAD87)+(Age088*K_88)
+INFLOWS:
+AgeingAD_87 = (AD087-DeathAD87)
+InflowAD88 = Age088*K_88
+OUTFLOWS:
+DeathAD88 = (AD088*DiseaseDeathRate_88)
+AgeingAD_88 = (AD088-DeathAD88)
+AD089(t) = AD089(t - dt) + (AgeingAD_88 + InflowAD89 - AgeingAD_89 - DeathAD89) * dt
+INIT AD089 = (AD088-DeathAD88)+(Age089*K_89)
+INFLOWS:
+AgeingAD_88 = (AD088-DeathAD88)
+InflowAD89 = Age089*K_89
+OUTFLOWS:
+AgeingAD_89 = (AD089-DeathAD89)
+DeathAD89 = (AD089*DiseaseDeathRate_89)
+AD090(t) = AD090(t - dt) + (AgeingAD_89 + InflowAD90 - DeathAD90 - AgeingAD_90) * dt
+INIT AD090 = (AD089-DeathAD89)+(Age090*K_90)
+INFLOWS:
+AgeingAD_89 = (AD089-DeathAD89)
+InflowAD90 = Age090*K_90
+OUTFLOWS:
+DeathAD90 = (AD090*DiseaseDeathRate_90)
+AgeingAD_90 = (AD090-DeathAD90)
+AD091(t) = AD091(t - dt) + (AgeingAD_90 + InflowAD91 - DeathAD91 - AgeingAD_91) * dt
+INIT AD091 = (AD090-DeathAD90)+(Age091*K_91)
+INFLOWS:
+AgeingAD_90 = (AD090-DeathAD90)
+InflowAD91 = Age091*K_91
+OUTFLOWS:
+DeathAD91 = (AD091*DiseaseDeathRate_91)
+AgeingAD_91 = (AD091-DeathAD91)
+AD092(t) = AD092(t - dt) + (AgeingAD_91 + InflowAd92 - DeathAD92 - AgeingAD_92) * dt
+INIT AD092 = (AD091-DeathAD91)+(Age092*K_92)
+INFLOWS:
+AgeingAD_91 = (AD091-DeathAD91)
+InflowAd92 = Age092*K_92
+OUTFLOWS:
+DeathAD92 = (AD092*DiseaseDeathRate_92)
+AgeingAD_92 = (AD092-DeathAD92)
+AD093(t) = AD093(t - dt) + (AgeingAD_92 + InflowAD93 - DeathAD93 - AgeingAD_93) * dt
+INIT AD093 = (AD092-DeathAD92)+(Age093*K_93)
+INFLOWS:
+AgeingAD_92 = (AD092-DeathAD92)
+InflowAD93 = Age093*K_93
+OUTFLOWS:
+DeathAD93 = (AD093*DiseaseDeathRate_93)
+AgeingAD_93 = (AD093-DeathAD93)
+AD094(t) = AD094(t - dt) + (AgeingAD_93 + InflowAD94 - DeathAD94 - AgeingAD_94) * dt
+INIT AD094 = (AD093-DeathAD93)+(Age094*K_94)
+INFLOWS:
+AgeingAD_93 = (AD093-DeathAD93)
+InflowAD94 = Age094*K_94
+OUTFLOWS:
+DeathAD94 = (AD094*DiseaseDeathRate_94)
+AgeingAD_94 = (AD094-DeathAD94)
+AD095(t) = AD095(t - dt) + (AgeingAD_94 + InflowAD95 - DeathAD95 - AgeingAD_95) * dt
+INIT AD095 = (AD094-DeathAD94)+(Age095*K_95)
+INFLOWS:
+AgeingAD_94 = (AD094-DeathAD94)
+InflowAD95 = Age095*K_95
+OUTFLOWS:
+DeathAD95 = (AD095*DiseaseDeathRate_95)
+AgeingAD_95 = (AD095-DeathAD95)
+AD097(t) = AD097(t - dt) + (AgeingAD_96 + InflowAD97 - DeathAD97 - AgeingAD_97) * dt
+INIT AD097 = (AD96-DeathAD96)+(Age097*K_97)
+INFLOWS:
+AgeingAD_96 = (AD96-DeathAD96)
+InflowAD97 = Age097*K_97
+OUTFLOWS:
+DeathAD97 = (AD097*DiseaseDeathRate_97)
+AgeingAD_97 = (AD097-DeathAD97)
+AD098(t) = AD098(t - dt) + (AgeingAD_97 + InflowAD98 - DeathAD98 - AgeingAD_98) * dt
+INIT AD098 = (AD097-DeathAD97)+(Age098*K_98)
+INFLOWS:
+AgeingAD_97 = (AD097-DeathAD97)
+InflowAD98 = Age098*K_98
+OUTFLOWS:
+DeathAD98 = (AD098*DiseaseDeathRate_98)
+AgeingAD_98 = (AD098-DeathAD98)
+AD099(t) = AD099(t - dt) + (AgeingAD_98 + InflowAD99 - DeathAD99 - AgeingAD99) * dt
+INIT AD099 = (AD098-DeathAD98)+(Age099*K_99)
+INFLOWS:
+AgeingAD_98 = (AD098-DeathAD98)
+InflowAD99 = Age099*K_99
+OUTFLOWS:
+DeathAD99 = (AD099*DiseaseDeathRate_99)
+AgeingAD99 = AD099-DeathAD99
+AD100(t) = AD100(t - dt) + (InflowAd100 + AgeingAD99 - DeathAD100) * dt
+INIT AD100 = (AD099-DeathAD99)+(Age100*K_100)
+INFLOWS:
+InflowAd100 = Age100*K_100
+AgeingAD99 = AD099-DeathAD99
+OUTFLOWS:
+DeathAD100 = (AD100*DiseaseDeathRate_100)
+AD96(t) = AD96(t - dt) + (AgeingAD_95 + InflowAD96 - DeathAD96 - AgeingAD_96) * dt
+INIT AD96 = (AD095-DeathAD95)+(Age096*K_96)
+INFLOWS:
+AgeingAD_95 = (AD095-DeathAD95)
+InflowAD96 = Age096*K_96
+OUTFLOWS:
+DeathAD96 = (AD96*DiseaseDeathRate_96)
+AgeingAD_96 = (AD96-DeathAD96)
+ADTotal(t) = ADTotal(t - dt) + (inflowAD - ouflowAD) * dt
+INIT ADTotal = AD065+AD066+AD067+AD068+AD069+AD070+AD071+AD072+AD073+AD074+AD075+AD076+AD077+AD078+AD079+AD080+AD081+AD082+AD083+AD084+AD085+AD086+AD087+AD088+AD089+AD090+AD091+AD092+AD093+AD094+AD095+AD96+AD097+AD098+AD099+AD100
+INFLOWS:
+inflowAD = AD065+AD066+AD067+AD068+AD069+AD070+AD071+AD072+AD073+AD074+AD075+AD076+AD077+AD078+AD079+AD080+AD081+AD082+AD083+AD084+AD085+AD086+AD087+AD088+AD089+AD090+AD091+AD092+AD093+AD094+AD095+AD96+AD097+AD098+AD099+AD100
+OUTFLOWS:
+ouflowAD = ADTotal
+Age000(t) = Age000(t - dt) + (PopulationBirth - Ageing_1 - Death_0) * dt
+INIT Age000 = 5151598
+INFLOWS:
+PopulationBirth = BirthRate/100*TotalPopulationSum
+OUTFLOWS:
+Ageing_1 = ROUND(Age000)-Death_0
+Death_0 = ROUND( Age000 *AgeSpecificDeathRate)
+Age001(t) = Age001(t - dt) + (Ageing_1 - Ageing_2 - Death_1) * dt
+INIT Age001 = 5248875
+INFLOWS:
+Ageing_1 = ROUND(Age000)-Death_0
+OUTFLOWS:
+Ageing_2 = Age001-Death_1
+Death_1 = ROUND( Age001 *AgeSpecificDeathRate_1 )
+Age002(t) = Age002(t - dt) + (Ageing_2 - Ageing_3 - Death_2) * dt
+INIT Age002 = 5371211
+INFLOWS:
+Ageing_2 = Age001-Death_1
+OUTFLOWS:
+Ageing_3 = Age002-Death_2
+Death_2 = ROUND( Age002 * AgeSpecificDeathRate_2 )
+Age003(t) = Age003(t - dt) + (Ageing_3 - Ageing_4 - Death_3) * dt
+INIT Age003 = 5406764
+INFLOWS:
+Ageing_3 = Age002-Death_2
+OUTFLOWS:
+Ageing_4 = Age003-Death_3
+Death_3 = ROUND( Age003 * AgeSpecificDeathRate_3)
+Age004(t) = Age004(t - dt) + (Ageing_4 - Ageing_5 - Death_4) * dt
+INIT Age004 = 5464960
+INFLOWS:
+Ageing_4 = Age003-Death_3
+OUTFLOWS:
+Ageing_5 = Age004-Death_4
+Death_4 = ROUND( Age004 * AgeSpecificDeathRate_4 )
+Age005(t) = Age005(t - dt) + (Ageing_5 - Ageing_6 - Death_5) * dt
+INIT Age005 = 5359986
+INFLOWS:
+Ageing_5 = Age004-Death_4
+OUTFLOWS:
+Ageing_6 = Age005-Death_5
+Death_5 = ROUND( Age005 * AgeSpecificDeathRate_5 )
+Age006(t) = Age006(t - dt) + (Ageing_6 - Ageing_7 - Death_6) * dt
+INIT Age006 = 5313324
+INFLOWS:
+Ageing_6 = Age005-Death_5
+OUTFLOWS:
+Ageing_7 = Age006-Death_6
+Death_6 = ROUND( Age006 * AgeSpecificDeathRate_6)
+Age007(t) = Age007(t - dt) + (Ageing_7 - Ageing_8 - Death_7) * dt
+INIT Age007 = 5238464
+INFLOWS:
+Ageing_7 = Age006-Death_6
+OUTFLOWS:
+Ageing_8 = Age007-Death_7
+Death_7 = ROUND( Age007 * AgeSpecificDeathRate_7 )
+Age008(t) = Age008(t - dt) + (Ageing_8 - Ageing_9 - Death_8) * dt
+INIT Age008 = 5203165
+INFLOWS:
+Ageing_8 = Age007-Death_7
+OUTFLOWS:
+Ageing_9 = Age008-Death_8
+Death_8 = ROUND( Age008 * AgeSpecificDeathRate_8 )
+Age009(t) = Age009(t - dt) + (Ageing_9 - Ageing_10 - Death_9) * dt
+INIT Age009 = 5158843
+INFLOWS:
+Ageing_9 = Age008-Death_8
+OUTFLOWS:
+Ageing_10 = Age009-Death_9
+Death_9 = ROUND( Age009 * AgeSpecificDeathRate_9 )
+Age010(t) = Age010(t - dt) + (Ageing_10 - Ageing_11 - Death_10) * dt
+INIT Age010 = 5139792
+INFLOWS:
+Ageing_10 = Age009-Death_9
+OUTFLOWS:
+Ageing_11 = Age010-Death_10
+Death_10 = ROUND( Age010 * AgeSpecificDeathRate_10)
+Age011(t) = Age011(t - dt) + (Ageing_11 - Ageing_12 - Death_11) * dt
+INIT Age011 = 5190699
+INFLOWS:
+Ageing_11 = Age010-Death_10
+OUTFLOWS:
+Ageing_12 = Age011-Death_11
+Death_11 = ROUND( Age011 * AgeSpecificDeathRate_11 )
+Age012(t) = Age012(t - dt) + (Ageing_12 - Ageing_13 - Death_12) * dt
+INIT Age012 = 5323846
+INFLOWS:
+Ageing_12 = Age011-Death_11
+OUTFLOWS:
+Ageing_13 = Age012-Death_12
+Death_12 = ROUND( Age012 * AgeSpecificDeathRate_12 )
+Age013(t) = Age013(t - dt) + (Ageing_13 - Ageing_14 - Death_13) * dt
+INIT Age013 = 5278406
+INFLOWS:
+Ageing_13 = Age012-Death_12
+OUTFLOWS:
+Ageing_14 = Age013-Death_13
+Death_13 = ROUND( Age013 * AgeSpecificDeathRate_13 )
+Age014(t) = Age014(t - dt) + (Ageing_14 - Ageing_15 - Death_14) * dt
+INIT Age014 = 5307753
+INFLOWS:
+Ageing_14 = Age013-Death_13
+OUTFLOWS:
+Ageing_15 = Age014-Death_14
+Death_14 = ROUND( Age014 * AgeSpecificDeathRate_14 )
+Age015(t) = Age015(t - dt) + (Ageing_15 - Ageing_16 - Death_15) * dt
+INIT Age015 = 5367754
+INFLOWS:
+Ageing_15 = Age014-Death_14
+OUTFLOWS:
+Ageing_16 = Age015-Death_15
+Death_15 = ROUND( Age015 * AgeSpecificDeathRate_15 )
+Age016(t) = Age016(t - dt) + (Ageing_16 - Ageing_17 - Death_16) * dt
+INIT Age016 = 5423865
+INFLOWS:
+Ageing_16 = Age015-Death_15
+OUTFLOWS:
+Ageing_17 = Age016-Death_16
+Death_16 = ROUND( Age016 * AgeSpecificDeathRate_16 )
+Age017(t) = Age017(t - dt) + (Ageing_17 - Ageing_18 - Death_17) * dt
+INIT Age017 = 5440672
+INFLOWS:
+Ageing_17 = Age016-Death_16
+OUTFLOWS:
+Ageing_18 = Age017-Death_17
+Death_17 = ROUND( Age017 * AgeSpecificDeathRate_17 )
+Age018(t) = Age018(t - dt) + (Ageing_18 - Ageing_19 - Death_18) * dt
+INIT Age018 = 5558826
+INFLOWS:
+Ageing_18 = Age017-Death_17
+OUTFLOWS:
+Ageing_19 = Age018-Death_18
+Death_18 = ROUND( Age018 * AgeSpecificDeathRate_18 )
+Age019(t) = Age019(t - dt) + (Ageing_19 - Ageing_20 - Death_19) * dt
+INIT Age019 = 5716940
+INFLOWS:
+Ageing_19 = Age018-Death_18
+OUTFLOWS:
+Ageing_20 = Age019-Death_19
+Death_19 = ROUND( Age019 * AgeSpecificDeathRate_19)
+Age020(t) = Age020(t - dt) + (Ageing_20 - Ageing_21 - Death_20) * dt
+INIT Age020 = 5914570
+INFLOWS:
+Ageing_20 = Age019-Death_19
+OUTFLOWS:
+Ageing_21 = Age020-Death_20
+Death_20 = ROUND( Age020 * AgeSpecificDeathRate_20 )
+Age021(t) = Age021(t - dt) + (Ageing_21 - Ageing_22 - Death_21) * dt
+INIT Age021 = 6066011
+INFLOWS:
+Ageing_21 = Age020-Death_20
+OUTFLOWS:
+Ageing_22 = Age021-Death_21
+Death_21 = ROUND( Age021 *AgeSpecificDeathRate_21)
+Age022(t) = Age022(t - dt) + (Ageing_22 - Ageing_23 - Death_22) * dt
+INIT Age022 = 6251482
+INFLOWS:
+Ageing_22 = Age021-Death_21
+OUTFLOWS:
+Ageing_23 = Age022-Death_22
+Death_22 = ROUND( Age022 *AgeSpecificDeathRate_22 )
+Age023(t) = Age023(t - dt) + (Ageing_23 - Ageing_24 - Death_23) * dt
+INIT Age023 = 6280687
+INFLOWS:
+Ageing_23 = Age022-Death_22
+OUTFLOWS:
+Ageing_24 = Age023-Death_23
+Death_23 = ROUND( Age023 * AgeSpecificDeathRate_23 )
+Age024(t) = Age024(t - dt) + (Ageing_24 - Ageing_25 - Death_24) * dt
+INIT Age024 = 6394618
+INFLOWS:
+Ageing_24 = Age023-Death_23
+OUTFLOWS:
+Ageing_25 = Age024-Death_24
+Death_24 = ROUND( Age024 * AgeSpecificDeathRate_24 )
+Age025(t) = Age025(t - dt) + (Ageing_25 - Ageing_26 - Death_25) * dt
+INIT Age025 = 6367790
+INFLOWS:
+Ageing_25 = Age024-Death_24
+OUTFLOWS:
+Ageing_26 = Age025-Death_25
+Death_25 = ROUND( Age025 * AgeSpecificDeathRate_25)
+Age026(t) = Age026(t - dt) + (Ageing_26 - Ageing_27 - Death_26) * dt
+INIT Age026 = 6428468
+INFLOWS:
+Ageing_26 = Age025-Death_25
+OUTFLOWS:
+Ageing_27 = Age026-Death_26
+Death_26 = ROUND( Age026 * AgeSpecificDeathRate_26)
+Age027(t) = Age027(t - dt) + (Ageing_27 - Ageing_28 - Death_27) * dt
+INIT Age027 = 6480104
+INFLOWS:
+Ageing_27 = Age026-Death_26
+OUTFLOWS:
+Ageing_28 = Age027-Death_27
+Death_27 = ROUND( Age027 * AgeSpecificDeathRate_27 )
+Age028(t) = Age028(t - dt) + (Ageing_28 - Ageing_29 - Death_28) * dt
+INIT Age028 = 6537404
+INFLOWS:
+Ageing_28 = Age027-Death_27
+OUTFLOWS:
+Ageing_29 = Age028-Death_28
+Death_28 = ROUND( Age028 * AgeSpecificDeathRate_28 )
+Age029(t) = Age029(t - dt) + (Ageing_29 - Ageing_30 - Death_29) * dt
+INIT Age029 = 6580927
+INFLOWS:
+Ageing_29 = Age028-Death_28
+OUTFLOWS:
+Ageing_30 = Age029-Death_29
+Death_29 = ROUND( Age029 * AgeSpecificDeathRate_29)
+Age030(t) = Age030(t - dt) + (Ageing_30 - Ageing_31 - Death_30) * dt
+INIT Age030 = 6757120
+INFLOWS:
+Ageing_30 = Age029-Death_29
+OUTFLOWS:
+Ageing_31 = Age030-Death_30
+Death_30 = ROUND( Age030 * AgeSpecificDeathRate_30 )
+Age031(t) = Age031(t - dt) + (Ageing_31 - Ageing_32 - Death_31) * dt
+INIT Age031 = 6830627
+INFLOWS:
+Ageing_31 = Age030-Death_30
+OUTFLOWS:
+Ageing_32 = Age031-Death_31
+Death_31 = ROUND( Age031 * AgeSpecificDeathRate_31)
+Age032(t) = Age032(t - dt) + (Ageing_32 - Ageing_33 - Death_32) * dt
+INIT Age032 = 6980010
+INFLOWS:
+Ageing_32 = Age031-Death_31
+OUTFLOWS:
+Ageing_33 = Age032-Death_32
+Death_32 = ROUND( Age032 * AgeSpecificDeathRate_32 )
+Age033(t) = Age033(t - dt) + (Ageing_33 - Ageing_34 - Death_33) * dt
+INIT Age033 = 6939346
+INFLOWS:
+Ageing_33 = Age032-Death_32
+OUTFLOWS:
+Ageing_34 = Age033-Death_33
+Death_33 = ROUND( Age033 * AgeSpecificDeathRate_33)
+Age034(t) = Age034(t - dt) + (Ageing_34 - Ageing_35 - Death_34) * dt
+INIT Age034 = 6938877
+INFLOWS:
+Ageing_34 = Age033-Death_33
+OUTFLOWS:
+Ageing_35 = Age034-Death_34
+Death_34 = ROUND( Age034 * AgeSpecificDeathRate_34 )
+Age035(t) = Age035(t - dt) + (Ageing_35 - Ageing_36 - Death_35) * dt
+INIT Age035 = 6970413
+INFLOWS:
+Ageing_35 = Age034-Death_34
+OUTFLOWS:
+Ageing_36 = Age035-Death_35
+Death_35 = ROUND( Age035 * AgeSpecificDeathRate_35 )
+Age036(t) = Age036(t - dt) + (Ageing_36 - Ageing_37 - Death_36) * dt
+INIT Age036 = 7022642
+INFLOWS:
+Ageing_36 = Age035-Death_35
+OUTFLOWS:
+Ageing_37 = Age036-Death_36
+Death_36 = ROUND( Age036 *AgeSpecificDeathRate_36)
+Age037(t) = Age037(t - dt) + (Ageing_37 - Ageing_38 - Death_37) * dt
+INIT Age037 = 7073080
+INFLOWS:
+Ageing_37 = Age036-Death_36
+OUTFLOWS:
+Ageing_38 = Age037-Death_37
+Death_37 = ROUND( Age037 * AgeSpecificDeathRate_37 )
+Age038(t) = Age038(t - dt) + (Ageing_38 - Ageing_39 - Death_38) * dt
+INIT Age038 = 7181345
+INFLOWS:
+Ageing_38 = Age037-Death_37
+OUTFLOWS:
+Ageing_39 = Age038-Death_38
+Death_38 = ROUND( Age038 * AgeSpecificDeathRate_38 )
+Age039(t) = Age039(t - dt) + (Ageing_39 - Ageing_40 - Death_39) * dt
+INIT Age039 = 7125477
+INFLOWS:
+Ageing_39 = Age038-Death_38
+OUTFLOWS:
+Ageing_40 = Age039-Death_39
+Death_39 = ROUND( Age039 * AgeSpecificDeathRate_39 )
+Age040(t) = Age040(t - dt) + (Ageing_40 - Ageng_41 - Death_40) * dt
+INIT Age040 = 7286731
+INFLOWS:
+Ageing_40 = Age039-Death_39
+OUTFLOWS:
+Ageng_41 = Age040-Death_40
+Death_40 = ROUND( Age040 * AgeSpecificDeathRate_40)
+Age041(t) = Age041(t - dt) + (Ageng_41 - Ageing_42 - Death_41) * dt
+INIT Age041 = 7414728
+INFLOWS:
+Ageng_41 = Age040-Death_40
+OUTFLOWS:
+Ageing_42 = Age041-Death_41
+Death_41 = ROUND( Age041 * AgeSpecificDeathRate_41 )
+Age042(t) = Age042(t - dt) + (Ageing_42 - Ageing_43 - Death_42) * dt
+INIT Age042 = 7435589
+INFLOWS:
+Ageing_42 = Age041-Death_41
+OUTFLOWS:
+Ageing_43 = Age042-Death_42
+Death_42 = ROUND( Age042 * AgeSpecificDeathRate_42 )
+Age043(t) = Age043(t - dt) + (Ageing_43 - Ageing_44 - Death_43) * dt
+INIT Age043 = 7540889
+INFLOWS:
+Ageing_43 = Age042-Death_42
+OUTFLOWS:
+Ageing_44 = Age043-Death_43
+Death_43 = ROUND( Age043 * AgeSpecificDeathRate_43 )
+Age044(t) = Age044(t - dt) + (Ageing_44 - Ageing_45 - Death_44) * dt
+INIT Age044 = 7621377
+INFLOWS:
+Ageing_44 = Age043-Death_43
+OUTFLOWS:
+Ageing_45 = Age044-Death_44
+Death_44 = ROUND( Age044 * AgeSpecificDeathRate_44 )
+Age045(t) = Age045(t - dt) + (Ageing_45 - Ageing_46 - Death_45) * dt
+INIT Age045 = 7659167
+INFLOWS:
+Ageing_45 = Age044-Death_44
+OUTFLOWS:
+Ageing_46 = Age045-Death_45
+Death_45 = ROUND( Age045 * AgeSpecificDeathRate_45)
+Age046(t) = Age046(t - dt) + (Ageing_46 - Ageing_47 - Death_46) * dt
+INIT Age046 = 7530450
+INFLOWS:
+Ageing_46 = Age045-Death_45
+OUTFLOWS:
+Ageing_47 = Age046-Death_46
+Death_46 = ROUND( Age046 * AgeSpecificDeathRate_46 )
+Age047(t) = Age047(t - dt) + (Ageing_47 - Ageing_48 - Death_47) * dt
+INIT Age047 = 7553373
+INFLOWS:
+Ageing_47 = Age046-Death_46
+OUTFLOWS:
+Ageing_48 = Age047-Death_47
+Death_47 = ROUND( Age047 *AgeSpecificDeathRate_47 )
+Age048(t) = Age048(t - dt) + (Ageing_48 - Ageing_49 - Death_48) * dt
+INIT Age048 = 7638871
+INFLOWS:
+Ageing_48 = Age047-Death_47
+OUTFLOWS:
+Ageing_49 = Age048-Death_48
+Death_48 = ROUND( Age048 * AgeSpecificDeathRate_48 )
+Age049(t) = Age049(t - dt) + (Ageing_49 - Ageing_50 - Death_49) * dt
+INIT Age049 = 7487014
+INFLOWS:
+Ageing_49 = Age048-Death_48
+OUTFLOWS:
+Ageing_50 = Age049-Death_49
+Death_49 = ROUND( Age049 * AgeSpecificDeathRate_49 )
+Age050(t) = Age050(t - dt) + (Ageing_50 - Ageing_51 - Death_50) * dt
+INIT Age050 = 7307250
+INFLOWS:
+Ageing_50 = Age049-Death_49
+OUTFLOWS:
+Ageing_51 = Age050-Death_50
+Death_50 = ROUND( Age050 * AgeSpecificDeathRate_50)
+Age051(t) = Age051(t - dt) + (Ageing_51 - Ageing_52 - Death_51) * dt
+INIT Age051 = 7257856
+INFLOWS:
+Ageing_51 = Age050-Death_50
+OUTFLOWS:
+Ageing_52 = Age051-Death_51
+Death_51 = ROUND( Age051 * AgeSpecificDeathRate_51)
+Age052(t) = Age052(t - dt) + (Ageing_52 - Ageing_53 - Death_52) * dt
+INIT Age052 = 7185886
+INFLOWS:
+Ageing_52 = Age051-Death_51
+OUTFLOWS:
+Ageing_53 = Age052-Death_52
+Death_52 = ROUND( Age052 * AgeSpecificDeathRate_52)
+Age053(t) = Age053(t - dt) + (Ageing_53 - Ageing_54 - Death_53) * dt
+INIT Age053 = 7087973
+INFLOWS:
+Ageing_53 = Age052-Death_52
+OUTFLOWS:
+Ageing_54 = Age053-Death_53
+Death_53 = ROUND( Age053 * AgeSpecificDeathRate_53 )
+Age054(t) = Age054(t - dt) + (Ageing_54 - Ageing_55 - Death_54) * dt
+INIT Age054 = 6953566
+INFLOWS:
+Ageing_54 = Age053-Death_53
+OUTFLOWS:
+Ageing_55 = Age054-Death_54
+Death_54 = ROUND( Age054 * AgeSpecificDeathRate_54 )
+Age055(t) = Age055(t - dt) + (Ageing_55 - Ageing_56 - Death_55) * dt
+INIT Age055 = 6889343
+INFLOWS:
+Ageing_55 = Age054-Death_54
+OUTFLOWS:
+Ageing_56 = Age055-Death_55
+Death_55 = ROUND( Age055 * AgeSpecificDeathRate_55 )
+Age056(t) = Age056(t - dt) + (Ageing_56 - Ageing_57 - Death_56) * dt
+INIT Age056 = 6780831
+INFLOWS:
+Ageing_56 = Age055-Death_55
+OUTFLOWS:
+Ageing_57 = Age056-Death_56
+Death_56 = ROUND( Age056 *AgeSpecificDeathRate_56 )
+Age057(t) = Age057(t - dt) + (Ageing_57 - Ageing_58 - Death_57) * dt
+INIT Age057 = 6677515
+INFLOWS:
+Ageing_57 = Age056-Death_56
+OUTFLOWS:
+Ageing_58 = Age057-Death_57
+Death_57 = ROUND( Age057 * AgeSpecificDeathRate_57 )
+Age058(t) = Age058(t - dt) + (Ageing_58 - Ageing_59 - Death_58) * dt
+INIT Age058 = 6528333
+INFLOWS:
+Ageing_58 = Age057-Death_57
+OUTFLOWS:
+Ageing_59 = Age058-Death_58
+Death_58 = ROUND( Age058 * AgeSpecificDeathRate_58 )
+Age059(t) = Age059(t - dt) + (Ageing_59 - Ageing_60 - Death_59) * dt
+INIT Age059 = 6364867
+INFLOWS:
+Ageing_59 = Age058-Death_58
+OUTFLOWS:
+Ageing_60 = Age059-Death_59
+Death_59 = ROUND( Age059 *AgeSpecificDeathRate_59 )
+Age060(t) = Age060(t - dt) + (Ageing_60 - Ageing_61 - Death_60) * dt
+INIT Age060 = 6317852
+INFLOWS:
+Ageing_60 = Age059-Death_59
+OUTFLOWS:
+Ageing_61 = Age060-Death_60
+Death_60 = ROUND( Age060 * AgeSpecificDeathRate_60)
+Age061(t) = Age061(t - dt) + (Ageing_61 - Ageing_62 - Death_61) * dt
+INIT Age061 = 6169255
+INFLOWS:
+Ageing_61 = Age060-Death_60
+OUTFLOWS:
+Ageing_62 = Age061-Death_61
+Death_61 = ROUND( Age061 * AgeSpecificDeathRate_61 )
+Age062(t) = Age062(t - dt) + (Ageing_62 - Ageing_63 - Death_62) * dt
+INIT Age062 = 6212348
+INFLOWS:
+Ageing_62 = Age061-Death_61
+OUTFLOWS:
+Ageing_63 = Age062-Death_62
+Death_62 = ROUND( Age062 *AgeSpecificDeathRate_62 )
+Age063(t) = Age063(t - dt) + (Ageing_63 - Ageing_64 - Death_63) * dt
+INIT Age063 = 6146785
+INFLOWS:
+Ageing_63 = Age062-Death_62
+OUTFLOWS:
+Ageing_64 = Age063-Death_63
+Death_63 = ROUND( Age063 * AgeSpecificDeathRate_63 )
+Age064(t) = Age064(t - dt) + (Ageing_64 - Ageing_65 - Death_64) * dt
+INIT Age064 = 6070156
+INFLOWS:
+Ageing_64 = Age063-Death_63
+OUTFLOWS:
+Ageing_65 = Age064-Death_64
+Death_64 = ROUND( Age064 * AgeSpecificDeathRate_64 )
+Age065(t) = Age065(t - dt) + (Ageing_65 - Ageing_66 - Death_65) * dt
+INIT Age065 = 5899488
+INFLOWS:
+Ageing_65 = Age064-Death_64
+OUTFLOWS:
+Ageing_66 = Age065-Death_65
+Death_65 = ROUND( Age065 * AgeSpecificDeathRate_65 )
+Age066(t) = Age066(t - dt) + (Ageing_66 - Ageing_67 - Death_66) * dt
+INIT Age066 = 5558534
+INFLOWS:
+Ageing_66 = Age065-Death_65
+OUTFLOWS:
+Ageing_67 = Age066-Death_66
+Death_66 = ROUND( Age066 * AgeSpecificDeathRate_66 )
+Age067(t) = Age067(t - dt) + (Ageing_67 - Death_67 - Ageing_68) * dt
+INIT Age067 = 4684535
+INFLOWS:
+Ageing_67 = Age066-Death_66
+OUTFLOWS:
+Death_67 = ROUND( Age067 * AgeSpecificDeathRate_67 )
+Ageing_68 = Age067-Death_67
+Age068(t) = Age068(t - dt) + (Ageing_68 - Ageing_69 - Death_68) * dt
+INIT Age068 = 4865470
+INFLOWS:
+Ageing_68 = Age067-Death_67
+OUTFLOWS:
+Ageing_69 = Age068-Death_68
+Death_68 = ROUND( Age068 * AgeSpecificDeathRate_68 )
+Age069(t) = Age069(t - dt) + (Ageing_69 - Ageing_70 - Death_69) * dt
+INIT Age069 = 4729954
+INFLOWS:
+Ageing_69 = Age068-Death_68
+OUTFLOWS:
+Ageing_70 = Age069-Death_69
+Death_69 = ROUND( Age069 * AgeSpecificDeathRate_69 )
+Age070(t) = Age070(t - dt) + (Ageing_70 - Ageing_71 - Death_70) * dt
+INIT Age070 = 4460040
+INFLOWS:
+Ageing_70 = Age069-Death_69
+OUTFLOWS:
+Ageing_71 = Age070-Death_70
+Death_70 = ROUND( Age070 * AgeSpecificDeathRate_70 )
+Age071(t) = Age071(t - dt) + (Ageing_71 - Ageing_72 - Death_71) * dt
+INIT Age071 = 4470610
+INFLOWS:
+Ageing_71 = Age070-Death_70
+OUTFLOWS:
+Ageing_72 = Age071-Death_71
+Death_71 = ROUND( Age071 * AgeSpecificDeathRate_71 )
+Age072(t) = Age072(t - dt) + (Ageing_72 - Ageing_73 - Death_72) * dt
+INIT Age072 = 4639885
+INFLOWS:
+Ageing_72 = Age071-Death_71
+OUTFLOWS:
+Ageing_73 = Age072-Death_72
+Death_72 = ROUND( Age072 *AgeSpecificDeathRate_72 )
+Age073(t) = Age073(t - dt) + (Ageing_73 - Ageing_74 - Death_73) * dt
+INIT Age073 = 4444763
+INFLOWS:
+Ageing_73 = Age072-Death_72
+OUTFLOWS:
+Ageing_74 = Age073-Death_73
+Death_73 = ROUND( Age073 * AgeSpecificDeathRate_73 )
+Age074(t) = Age074(t - dt) + (Ageing_74 - Ageing_75 - Death_74) * dt
+INIT Age074 = 4277950
+INFLOWS:
+Ageing_74 = Age073-Death_73
+OUTFLOWS:
+Ageing_75 = Age074-Death_74
+Death_74 = ROUND( Age074 * AgeSpecificDeathRate_74 )
+Age075(t) = Age075(t - dt) + (Ageing_75 - Ageing_76 - Death_75) * dt
+INIT Age075 = 4076883
+INFLOWS:
+Ageing_75 = Age074-Death_74
+OUTFLOWS:
+Ageing_76 = Age075-Death_75
+Death_75 = ROUND( Age075 * AgeSpecificDeathRate_75 )
+Age077(t) = Age077(t - dt) + (Ageing_77 - Ageing_78 - Death_77) * dt
+INIT Age077 = 3762509
+INFLOWS:
+Ageing_77 = Age76-Death_76
+OUTFLOWS:
+Ageing_78 = Age077-Death_77
+Death_77 = ROUND( Age077 * AgeSpecificDeathRate_77)
+Age078(t) = Age078(t - dt) + (Ageing_78 - Ageing_79 - Death_78) * dt
+INIT Age078 = 3557384
+INFLOWS:
+Ageing_78 = Age077-Death_77
+OUTFLOWS:
+Ageing_79 = Age078-Death_78
+Death_78 = ROUND( Age078 * AgeSpecificDeathRate_78 )
+Age079(t) = Age079(t - dt) + (Ageing_79 - Ageing_80 - Death_79) * dt
+INIT Age079 = 3254151
+INFLOWS:
+Ageing_79 = Age078-Death_78
+OUTFLOWS:
+Ageing_80 = Age079-Death_79
+Death_79 = ROUND( Age079 * AgeSpecificDeathRate_79 )
+Age080(t) = Age080(t - dt) + (Ageing_80 - Ageing_81 - Death_80) * dt
+INIT Age080 = 3143143
+INFLOWS:
+Ageing_80 = Age079-Death_79
+OUTFLOWS:
+Ageing_81 = Age080-Death_80
+Death_80 = ROUND( Age080 * AgeSpecificDeathRate_80 )
+Age081(t) = Age081(t - dt) + (Ageing_81 - Ageing_82 - Death_81) * dt
+INIT Age081 = 2954283
+INFLOWS:
+Ageing_81 = Age080-Death_80
+OUTFLOWS:
+Ageing_82 = Age081-Death_81
+Death_81 = ROUND( Age081 * AgeSpecificDeathRate_81 )
+Age082(t) = Age082(t - dt) + (Ageing_82 - Ageing_83 - Death_82) * dt
+INIT Age082 = 2841498
+INFLOWS:
+Ageing_82 = Age081-Death_81
+OUTFLOWS:
+Ageing_83 = Age082-Death_82
+Death_82 = ROUND( Age082 * AgeSpecificDeathRate_82 )
+Age083(t) = Age083(t - dt) + (Ageing_83 - Ageing_84 - Death_83) * dt
+INIT Age083 = 2521677
+INFLOWS:
+Ageing_83 = Age082-Death_82
+OUTFLOWS:
+Ageing_84 = Age083-Death_83
+Death_83 = ROUND( Age083 * AgeSpecificDeathRate_83)
+Age084(t) = Age084(t - dt) + (Ageing_84 - Death_84 - Ageing_85) * dt
+INIT Age084 = 2307119
+INFLOWS:
+Ageing_84 = Age083-Death_83
+OUTFLOWS:
+Death_84 = ROUND( Age084 * AgeSpecificDeathRate_84)
+Ageing_85 = Age084-Death_84
+Age085(t) = Age085(t - dt) + (Ageing_85 - Death_85 - Ageing_86) * dt
+INIT Age085 = 1533029.454
+INFLOWS:
+Ageing_85 = Age084-Death_84
+OUTFLOWS:
+Death_85 = ROUND( Age085* AgeSpecificDeathRate_85)
+Ageing_86 = Age085-Death_85
+Age086(t) = Age086(t - dt) + (Ageing_86 - Death_86 - Ageing_87) * dt
+INIT Age086 = 1468162.587
+INFLOWS:
+Ageing_86 = Age085-Death_85
+OUTFLOWS:
+Death_86 = ROUND( Age086* AgeSpecificDeathRate_86)
+Ageing_87 = Age086-Death_86
+Age087(t) = Age087(t - dt) + (Ageing_87 - Death_87 - Ageing_88) * dt
+INIT Age087 = 1391869.917
+INFLOWS:
+Ageing_87 = Age086-Death_86
+OUTFLOWS:
+Death_87 = ROUND( Age087* AgeSpecificDeathRate_87)
+Ageing_88 = Age087-Death_87
+Age088(t) = Age088(t - dt) + (Ageing_88 - Death_88 - Ageing_89) * dt
+INIT Age088 = 1303043.215
+INFLOWS:
+Ageing_88 = Age087-Death_87
+OUTFLOWS:
+Death_88 = ROUND( Age088* AgeSpecificDeathRate_88)
+Ageing_89 = Age088-Death_88
+Age089(t) = Age089(t - dt) + (Ageing_89 - Death_89 - Ageing_90) * dt
+INIT Age089 = 1200916.363
+INFLOWS:
+Ageing_89 = Age088-Death_88
+OUTFLOWS:
+Death_89 = ROUND( Age089* AgeSpecificDeathRate_89)
+Ageing_90 = Age089-Death_89
+Age090(t) = Age090(t - dt) + (Ageing_90 - Death_90 - Ageing_91) * dt
+INIT Age090 = 1085323.74
+INFLOWS:
+Ageing_90 = Age089-Death_89
+OUTFLOWS:
+Death_90 = ROUND( Age090* AgeSpecificDeathRate_90)
+Ageing_91 = Age090-Death_90
+Age091(t) = Age091(t - dt) + (Ageing_91 - Death_91 - Ageing_92) * dt
+INIT Age091 = 957027.8064
+INFLOWS:
+Ageing_91 = Age090-Death_90
+OUTFLOWS:
+Death_91 = ROUND( Age091* AgeSpecificDeathRate_91)
+Ageing_92 = Age091-Death_91
+Age092(t) = Age092(t - dt) + (Ageing_92 - Death_92 - Ageing_93) * dt
+INIT Age092 = 818091.9388
+INFLOWS:
+Ageing_92 = Age091-Death_91
+OUTFLOWS:
+Death_92 = ROUND( Age092* AgeSpecificDeathRate_92)
+Ageing_93 = Age092-Death_92
+Age093(t) = Age093(t - dt) + (Ageing_93 - Death_93 - Ageing_94) * dt
+INIT Age093 = 672234.6399
+INFLOWS:
+Ageing_93 = Age092-Death_92
+OUTFLOWS:
+Death_93 = ROUND( Age093* AgeSpecificDeathRate_93)
+Ageing_94 = Age093-Death_93
+Age094(t) = Age094(t - dt) + (Ageing_94 - Death_94 - Ageing_95) * dt
+INIT Age094 = 525042.9901
+INFLOWS:
+Ageing_94 = Age093-Death_93
+OUTFLOWS:
+Death_94 = ROUND( Age094* AgeSpecificDeathRate_94)
+Ageing_95 = Age094-Death_94
+Age095(t) = Age095(t - dt) + (Ageing_95 - Death_95 - Ageing_96) * dt
+INIT Age095 = 383856.4218
+INFLOWS:
+Ageing_95 = Age094-Death_94
+OUTFLOWS:
+Death_95 = ROUND( Age095* AgeSpecificDeathRate_95)
+Ageing_96 = Age095-Death_95
+Age096(t) = Age096(t - dt) + (Ageing_96 - Death_96 - Ageing_97) * dt
+INIT Age096 = 257090.1959
+INFLOWS:
+Ageing_96 = Age095-Death_95
+OUTFLOWS:
+Death_96 = ROUND( Age096* AgeSpecificDeathRate_96)
+Ageing_97 = Age096-Death_96
+Age097(t) = Age097(t - dt) + (Ageing_97 - Death_97 - Ageing_98) * dt
+INIT Age097 = 152820.8864
+INFLOWS:
+Ageing_97 = Age096-Death_96
+OUTFLOWS:
+Death_97 = ROUND( Age097* AgeSpecificDeathRate_97)
+Ageing_98 = Age097-Death_97
+Age098(t) = Age098(t - dt) + (Ageing_98 - Death_98 - Ageing_99) * dt
+INIT Age098 = 76702.43767
+INFLOWS:
+Ageing_98 = Age097-Death_97
+OUTFLOWS:
+Death_98 = ROUND( Age098* AgeSpecificDeathRate_98)
+Ageing_99 = Age098-Death_98
+Age099(t) = Age099(t - dt) + (Ageing_99 - Death_99 - Ageing_100) * dt
+INIT Age099 = 29783.02001
+INFLOWS:
+Ageing_99 = Age098-Death_98
+OUTFLOWS:
+Death_99 = ROUND( Age099* AgeSpecificDeathRate_99)
+Ageing_100 = Age099-Death_99
+Age100(t) = Age100(t - dt) + (Ageing_100 - Death_100) * dt
+INIT Age100 = 7408.773823
+INFLOWS:
+Ageing_100 = Age099-Death_99
+OUTFLOWS:
+Death_100 = ROUND( Age100* AgeSpecificDeathRate_100)
+Age76(t) = Age76(t - dt) + (Ageing_76 - Ageing_77 - Death_76) * dt
+INIT Age76 = 3945545
+INFLOWS:
+Ageing_76 = Age075-Death_75
+OUTFLOWS:
+Ageing_77 = Age76-Death_76
+Death_76 = ROUND( Age76 * AgeSpecificDeathRate_76 )
+AveridgeAge(t) = AveridgeAge(t - dt) + (Inflow_2 - outflow_2) * dt
+INIT AveridgeAge = If 	(	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029 	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029 + Age030	)	then 	30	else	
+If 	(	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029 + Age030	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 	)	then 	31	else	
+If 	(	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 	)	then 	32	else	
+If 	(	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033	)	then 	33	else	
+If 	(	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 	)	then 	34	else	
+If 	(	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035	)	then 	35	else	
+If 	(	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036	)	then 	36	else	
+If 	(	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037	)	then 	37	else	
+If 	(	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038	)	then 	38	else	
+If 	(	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039	)	then 	39	else	
+If 	(	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 	)	then 	40	else	
+If 	(	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 	)	then 	41	else	
+If 	(	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042	)	then 	42	else	
+If 	(	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 	)	then 	43	else	
+If 	(	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044	)	then 	44	else	
+If 	(	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045	)	then 	45	else	
+If 	(	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 	)	then 	46	else	
+If 	(	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 	)	then 	47	else	
+If 	(	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 	)	then 	48	else	
+If 	(	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049	)	then 	49	else	
+If 	(	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 	)	then 	50	else	
+If 	(	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051	)	then 	51	else	
+If 	(	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051+ Age052	)	then 	52	else	
+If 	(	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051+ Age052	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051+ Age052 + Age053 	)	then 	53	else	
+If 	(	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051+ Age052 + Age053 	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051+ Age052 + Age053 + Age054	)	then 	54	else	
+If 	(	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051+ Age052 + Age053 + Age054	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051+ Age052 + Age053 + Age054 + Age055	)	then 	55	else	
+If 	(	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051+ Age052 + Age053 + Age054 + Age055	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051+ Age052 + Age053 + Age054 + Age055 + Age056 	)	then 	56	else	
+If 	(	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051+ Age052 + Age053 + Age054 + Age055 + Age056 	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051+ Age052 + Age053 + Age054 + Age055 + Age056 + Age057 	)	then 	57	else	
+If 	(	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051+ Age052 + Age053 + Age054 + Age055 + Age056 + Age057 	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051+ Age052 + Age053 + Age054 + Age055 + Age056 + Age057 + Age058	)	then 	58	else	
+If 	(	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051+ Age052 + Age053 + Age054 + Age055 + Age056 + Age057 + Age058	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051+ Age052 + Age053 + Age054 + Age055 + Age056 + Age057 + Age058 + Age059	)	then 	59	else	
+If 	(	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051+ Age052 + Age053 + Age054 + Age055 + Age056 + Age057 + Age058 + Age059	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051+ Age052 + Age053 + Age054 + Age055 + Age056 + Age057 + Age058 + Age059 + Age060 	)	then 	60	else	61
+
+INFLOWS:
+Inflow_2 = ((	0	*	Age000	)	 +
+(	1	*	Age001	)	 +
+(	2	*	Age002	)	 +
+(	3	*	Age003	)	 +
+(	4	*	Age004	)	 +
+(	5	*	Age005	)	 +
+(	6	*	Age006	)	 +
+(	7	*	Age007	)	 +
+(	8	*	Age008	)	 +
+(	9	*	Age009	)	 +
+(	10	*	Age010	)	 +
+(	11	*	Age011	)	 +
+(	12	*	Age012	)	 +
+(	13	*	Age013	)	 +
+(	14	*	Age014	)	 +
+(	15	*	Age015	)	 +
+(	16	*	Age016	)	 +
+(	17	*	Age017	)	 +
+(	18	*	Age018	)	 +
+(	19	*	Age019	)	 +
+(	20	*	Age020	)	 +
+(	21	*	Age021	)	 +
+(	22	*	Age022	)	 +
+(	23	*	Age023	)	 +
+(	24	*	Age024	)	 +
+(	25	*	Age025	)	 +
+(	26	*	Age026	)	 +
+(	27	*	Age027	)	 +
+(	28	*	Age028	)	 +
+(	29	*	Age029	)	 +
+(	30	*	Age030	)	 +
+(	31	*	Age031	)	 +
+(	32	*	Age032	)	 +
+(	33	*	Age033	)	 +
+(	34	*	Age034	)	 +
+(	35	*	Age035	)	 +
+(	36	*	Age036	)	 +
+(	37	*	Age037	)	 +
+(	38	*	Age038	)	 +
+(	39	*	Age039	)	 +
+(	40	*	Age040	)	 +
+(	41	*	Age041	)	 +
+(	42	*	Age042	)	 +
+(	43	*	Age043	)	 +
+(	44	*	Age044	)	 +
+(	45	*	Age045	)	 +
+(	46	*	Age046	)	 +
+(	47	*	Age047	)	 +
+(	48	*	Age048	)	 +
+(	49	*	Age049	)	 +
+(	50	*	Age050	)	 +
+(	51	*	Age051	)	 +
+(	52	*	Age052	)	 +
+(	53	*	Age053	)	 +
+(	54	*	Age054	)	 +
+(	55	*	Age055	)	 +
+(	56	*	Age056	)	 +
+(	57	*	Age057	)	 +
+(	58	*	Age058	)	 +
+(	59	*	Age059	)	 +
+(	60	*	Age060	)	 +
+(	61	*	Age061	)	 +
+(	62	*	Age062	)	 +
+(	63	*	Age063	)	 +
+(	64	*	Age064	)	 +
+(	65	*	Age065	)	 +
+(	66	*	Age066	)	 +
+(	67	*	Age067	)	 +
+(	68	*	Age068	)	 +
+(	69	*	Age069	)	 +
+(	70	*	Age070	)	 +
+(	71	*	Age071	)	 +
+(	72	*	Age072	)	 +
+(	73	*	Age073	)	 +
+(	74	*	Age074	)	 +
+(	75	*	Age075	)	 +
+(	76	*	Age76	)	 +
+(	77	*	Age077	)	 +
+(	78	*	Age078	)	 +
+(	79	*	Age079	)	 +
+(	80	*	Age080	)	 +
+(	81	*	Age081	)	 +
+(	82	*	Age082	)	 +
+(	83	*	Age083	)	 +
+(	84	*	Age084	)	 +
+(	85	*	Age085	)	 +
+(	86	*	Age086	)	 +
+(	87	*	Age087	)	 +
+(	88	*	Age088	)	 +
+(	89	*	Age089	)	 +
+(	90	*	Age090	)	 +
+(	91	*	Age091	)	 +
+(	92	*	Age092	)	 +
+(	93	*	Age093	)	 +
+(	94	*	Age094	)	 +
+(	95	*	Age095	)	 +
+(	96	*	Age096	)	 +
+(	97	*	Age097	)	 +
+(	98	*	Age098	)	 +
+(	99	*	Age099	)	 +
+(	100	*	Age100	)	)/TotalPopulationSum
+
+OUTFLOWS:
+outflow_2 = AveridgeAge
+AveridgeAge_1(t) = AveridgeAge_1(t - dt) + (Inflow_3 - outflow_3) * dt
+INIT AveridgeAge_1 = If 	(	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029 	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029 + Age030	)	then 	30	else	
+If 	(	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029 + Age030	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 	)	then 	31	else	
+If 	(	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 	)	then 	32	else	
+If 	(	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033	)	then 	33	else	
+If 	(	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 	)	then 	34	else	
+If 	(	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035	)	then 	35	else	
+If 	(	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036	)	then 	36	else	
+If 	(	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037	)	then 	37	else	
+If 	(	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038	)	then 	38	else	
+If 	(	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039	)	then 	39	else	
+If 	(	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 	)	then 	40	else	
+If 	(	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 	)	then 	41	else	
+If 	(	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042	)	then 	42	else	
+If 	(	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 	)	then 	43	else	
+If 	(	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044	)	then 	44	else	
+If 	(	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045	)	then 	45	else	
+If 	(	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 	)	then 	46	else	
+If 	(	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 	)	then 	47	else	
+If 	(	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 	)	then 	48	else	
+If 	(	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049	)	then 	49	else	
+If 	(	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 	)	then 	50	else	
+If 	(	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051	)	then 	51	else	
+If 	(	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051+ Age052	)	then 	52	else	
+If 	(	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051+ Age052	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051+ Age052 + Age053 	)	then 	53	else	
+If 	(	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051+ Age052 + Age053 	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051+ Age052 + Age053 + Age054	)	then 	54	else	
+If 	(	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051+ Age052 + Age053 + Age054	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051+ Age052 + Age053 + Age054 + Age055	)	then 	55	else	
+If 	(	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051+ Age052 + Age053 + Age054 + Age055	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051+ Age052 + Age053 + Age054 + Age055 + Age056 	)	then 	56	else	
+If 	(	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051+ Age052 + Age053 + Age054 + Age055 + Age056 	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051+ Age052 + Age053 + Age054 + Age055 + Age056 + Age057 	)	then 	57	else	
+If 	(	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051+ Age052 + Age053 + Age054 + Age055 + Age056 + Age057 	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051+ Age052 + Age053 + Age054 + Age055 + Age056 + Age057 + Age058	)	then 	58	else	
+If 	(	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051+ Age052 + Age053 + Age054 + Age055 + Age056 + Age057 + Age058	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051+ Age052 + Age053 + Age054 + Age055 + Age056 + Age057 + Age058 + Age059	)	then 	59	else	
+If 	(	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051+ Age052 + Age053 + Age054 + Age055 + Age056 + Age057 + Age058 + Age059	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051+ Age052 + Age053 + Age054 + Age055 + Age056 + Age057 + Age058 + Age059 + Age060 	)	then 	60	else	61
+
+INFLOWS:
+Inflow_3 = ((	0	*	Age000	)	 +
+(	1	*	Age001	)	 +
+(	2	*	Age002	)	 +
+(	3	*	Age003	)	 +
+(	4	*	Age004	)	 +
+(	5	*	Age005	)	 +
+(	6	*	Age006	)	 +
+(	7	*	Age007	)	 +
+(	8	*	Age008	)	 +
+(	9	*	Age009	)	 +
+(	10	*	Age010	)	 +
+(	11	*	Age011	)	 +
+(	12	*	Age012	)	 +
+(	13	*	Age013	)	 +
+(	14	*	Age014	)	 +
+(	15	*	Age015	)	 +
+(	16	*	Age016	)	 +
+(	17	*	Age017	)	 +
+(	18	*	Age018	)	 +
+(	19	*	Age019	)	 +
+(	20	*	Age020	)	 +
+(	21	*	Age021	)	 +
+(	22	*	Age022	)	 +
+(	23	*	Age023	)	 +
+(	24	*	Age024	)	 +
+(	25	*	Age025	)	 +
+(	26	*	Age026	)	 +
+(	27	*	Age027	)	 +
+(	28	*	Age028	)	 +
+(	29	*	Age029	)	 +
+(	30	*	Age030	)	 +
+(	31	*	Age031	)	 +
+(	32	*	Age032	)	 +
+(	33	*	Age033	)	 +
+(	34	*	Age034	)	 +
+(	35	*	Age035	)	 +
+(	36	*	Age036	)	 +
+(	37	*	Age037	)	 +
+(	38	*	Age038	)	 +
+(	39	*	Age039	)	 +
+(	40	*	Age040	)	 +
+(	41	*	Age041	)	 +
+(	42	*	Age042	)	 +
+(	43	*	Age043	)	 +
+(	44	*	Age044	)	 +
+(	45	*	Age045	)	 +
+(	46	*	Age046	)	 +
+(	47	*	Age047	)	 +
+(	48	*	Age048	)	 +
+(	49	*	Age049	)	 +
+(	50	*	Age050	)	 +
+(	51	*	Age051	)	 +
+(	52	*	Age052	)	 +
+(	53	*	Age053	)	 +
+(	54	*	Age054	)	 +
+(	55	*	Age055	)	 +
+(	56	*	Age056	)	 +
+(	57	*	Age057	)	 +
+(	58	*	Age058	)	 +
+(	59	*	Age059	)	 +
+(	60	*	Age060	)	 +
+(	61	*	Age061	)	 +
+(	62	*	Age062	)	 +
+(	63	*	Age063	)	 +
+(	64	*	Age064	)	 +
+(	65	*	Age065	)	 +
+(	66	*	Age066	)	 +
+(	67	*	Age067	)	 +
+(	68	*	Age068	)	 +
+(	69	*	Age069	)	 +
+(	70	*	Age070	)	 +
+(	71	*	Age071	)	 +
+(	72	*	Age072	)	 +
+(	73	*	Age073	)	 +
+(	74	*	Age074	)	 +
+(	75	*	Age075	)	 +
+(	76	*	Age76	)	 +
+(	77	*	Age077	)	 +
+(	78	*	Age078	)	 +
+(	79	*	Age079	)	 +
+(	80	*	Age080	)	 +
+(	81	*	Age081	)	 +
+(	82	*	Age082	)	 +
+(	83	*	Age083	)	 +
+(	84	*	Age084	)	 +
+(	85	*	Age085	)	 +
+(	86	*	Age086	)	 +
+(	87	*	Age087	)	 +
+(	88	*	Age088	)	 +
+(	89	*	Age089	)	 +
+(	90	*	Age090	)	 +
+(	91	*	Age091	)	 +
+(	92	*	Age092	)	 +
+(	93	*	Age093	)	 +
+(	94	*	Age094	)	 +
+(	95	*	Age095	)	 +
+(	96	*	Age096	)	 +
+(	97	*	Age097	)	 +
+(	98	*	Age098	)	 +
+(	99	*	Age099	)	 +
+(	100	*	Age100	)	)/TotalPopulationSum
+
+OUTFLOWS:
+outflow_3 = AveridgeAge_1
+Median(t) = Median(t - dt) + (Inflow_Median - outflow_Median) * dt
+INIT Median = If 	(	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029 	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029 + Age030	)	then 	30	else	
+If 	(	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029 + Age030	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 	)	then 	31	else	
+If 	(	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 	)	then 	32	else	
+If 	(	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033	)	then 	33	else	
+If 	(	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 	)	then 	34	else	
+If 	(	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035	)	then 	35	else	
+If 	(	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036	)	then 	36	else	
+If 	(	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037	)	then 	37	else	
+If 	(	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038	)	then 	38	else	
+If 	(	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039	)	then 	39	else	
+If 	(	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 	)	then 	40	else	
+If 	(	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 	)	then 	41	else	
+If 	(	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042	)	then 	42	else	
+If 	(	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 	)	then 	43	else	
+If 	(	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044	)	then 	44	else	
+If 	(	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045	)	then 	45	else	
+If 	(	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 	)	then 	46	else	
+If 	(	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 	)	then 	47	else	
+If 	(	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 	)	then 	48	else	
+If 	(	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049	)	then 	49	else	
+If 	(	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 	)	then 	50	else	
+If 	(	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051	)	then 	51	else	
+If 	(	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051+ Age052	)	then 	52	else	
+If 	(	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051+ Age052	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051+ Age052 + Age053 	)	then 	53	else	
+If 	(	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051+ Age052 + Age053 	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051+ Age052 + Age053 + Age054	)	then 	54	else	
+If 	(	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051+ Age052 + Age053 + Age054	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051+ Age052 + Age053 + Age054 + Age055	)	then 	55	else	
+If 	(	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051+ Age052 + Age053 + Age054 + Age055	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051+ Age052 + Age053 + Age054 + Age055 + Age056 	)	then 	56	else	
+If 	(	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051+ Age052 + Age053 + Age054 + Age055 + Age056 	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051+ Age052 + Age053 + Age054 + Age055 + Age056 + Age057 	)	then 	57	else	
+If 	(	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051+ Age052 + Age053 + Age054 + Age055 + Age056 + Age057 	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051+ Age052 + Age053 + Age054 + Age055 + Age056 + Age057 + Age058	)	then 	58	else	
+If 	(	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051+ Age052 + Age053 + Age054 + Age055 + Age056 + Age057 + Age058	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051+ Age052 + Age053 + Age054 + Age055 + Age056 + Age057 + Age058 + Age059	)	then 	59	else	
+If 	(	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051+ Age052 + Age053 + Age054 + Age055 + Age056 + Age057 + Age058 + Age059	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051+ Age052 + Age053 + Age054 + Age055 + Age056 + Age057 + Age058 + Age059 + Age060 	)	then 	60	else	61
+
+INFLOWS:
+Inflow_Median = If 	(	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029 	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029 + Age030	)	then 	30	else	
+If 	(	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029 + Age030	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 	)	then 	31	else	
+If 	(	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 	)	then 	32	else	
+If 	(	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033	)	then 	33	else	
+If 	(	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 	)	then 	34	else	
+If 	(	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035	)	then 	35	else	
+If 	(	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036	)	then 	36	else	
+If 	(	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037	)	then 	37	else	
+If 	(	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038	)	then 	38	else	
+If 	(	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039	)	then 	39	else	
+If 	(	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 	)	then 	40	else	
+If 	(	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 	)	then 	41	else	
+If 	(	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042	)	then 	42	else	
+If 	(	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 	)	then 	43	else	
+If 	(	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044	)	then 	44	else	
+If 	(	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045	)	then 	45	else	
+If 	(	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 	)	then 	46	else	
+If 	(	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 	)	then 	47	else	
+If 	(	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 	)	then 	48	else	
+If 	(	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049	)	then 	49	else	
+If 	(	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 	)	then 	50	else	
+If 	(	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051	)	then 	51	else	
+If 	(	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051+ Age052	)	then 	52	else	
+If 	(	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051+ Age052	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051+ Age052 + Age053 	)	then 	53	else	
+If 	(	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051+ Age052 + Age053 	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051+ Age052 + Age053 + Age054	)	then 	54	else	
+If 	(	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051+ Age052 + Age053 + Age054	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051+ Age052 + Age053 + Age054 + Age055	)	then 	55	else	
+If 	(	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051+ Age052 + Age053 + Age054 + Age055	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051+ Age052 + Age053 + Age054 + Age055 + Age056 	)	then 	56	else	
+If 	(	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051+ Age052 + Age053 + Age054 + Age055 + Age056 	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051+ Age052 + Age053 + Age054 + Age055 + Age056 + Age057 	)	then 	57	else	
+If 	(	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051+ Age052 + Age053 + Age054 + Age055 + Age056 + Age057 	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051+ Age052 + Age053 + Age054 + Age055 + Age056 + Age057 + Age058	)	then 	58	else	
+If 	(	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051+ Age052 + Age053 + Age054 + Age055 + Age056 + Age057 + Age058	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051+ Age052 + Age053 + Age054 + Age055 + Age056 + Age057 + Age058 + Age059	)	then 	59	else	
+If 	(	 Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051+ Age052 + Age053 + Age054 + Age055 + Age056 + Age057 + Age058 + Age059	<	TotalPopulationSum/2	and 	TotalPopulationSum/2	<=	Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029+ Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051+ Age052 + Age053 + Age054 + Age055 + Age056 + Age057 + Age058 + Age059 + Age060 	)	then 	60	else	61
+
+OUTFLOWS:
+outflow_Median = Median
+TotalPopulationSum(t) = TotalPopulationSum(t - dt) + (Inflow - outflow) * dt
+INIT TotalPopulationSum = Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029 + Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051+ Age052 + Age053 + Age054 + Age055 + Age056 + Age057 + Age058 + Age059 + Age060 + Age061 + Age062 + Age063 + Age064 + Age065 + Age066 + Age067 + Age068 + Age069 + Age070 + Age071 + Age072 + Age073 + Age074 + Age075 + Age76 + Age077 + Age078 + Age079 + Age080 + Age081 + Age082 + Age083 + Age084+Age085+Age086+Age087+Age088+Age089+Age090+Age091+Age092+Age093+Age094+Age095+Age096+Age097+Age098+Age099+Age100
+INFLOWS:
+Inflow = Age000 + Age001+ Age002 + Age003 + Age004 + Age005 + Age006 + Age007 + Age008 + Age009 + Age010 + Age011+ Age012 + Age013 + Age014 + Age015 + Age016 + Age017 + Age018 + Age019 + Age020 + Age021 + Age022 + Age023 + Age024 + Age025 + Age026 + Age027 + Age028 + Age029 + Age030 + Age031 + Age032 + Age033 + Age034 + Age035 + Age036 + Age037 + Age038 + Age039 + Age040 + Age041 + Age042 + Age043 + Age044 + Age045 + Age046 + Age047 + Age048 + Age049 + Age050 + Age051+ Age052 + Age053 + Age054 + Age055 + Age056 + Age057 + Age058 + Age059 + Age060 + Age061 + Age062 + Age063 + Age064 + Age065 + Age066 + Age067 + Age068 + Age069 + Age070 + Age071 + Age072 + Age073 + Age074 + Age075 + Age76 + Age077 + Age078 + Age079 + Age080 + Age081 + Age082 + Age083 + Age084+Age085+Age086+Age087+Age088+Age089+Age090+Age091+Age092+Age093+Age094+Age095+Age096+Age097+Age098+Age099+Age100
+OUTFLOWS:
+outflow = TotalPopulationSum
+AgeSpecificDeathRate = 0.11937857 / ( (time+1) + 21.468877 )
+AgeSpecificDeathRate_1 = 0.009307994 / ( (time+1) + 20.39893289 )
+AgeSpecificDeathRate_10 = 0.003641204 / ( (time+1) + 29.15226337 )
+AgeSpecificDeathRate_100 = 0.922605228248
+AgeSpecificDeathRate_11 = 0.003174486 / ( (time+1) + 23.47806774 )
+AgeSpecificDeathRate_12 = 0.003293091 / ( (time+1) + 21.84647592 )
+AgeSpecificDeathRate_13 = 0.003068505 / ( (time+1) + 16.83399769 )
+AgeSpecificDeathRate_14 = 0.004040362 / ( (time+1) + 17.85514466 )
+AgeSpecificDeathRate_15 = 0.004783911 / ( (time+1) + 16.9356113 )
+AgeSpecificDeathRate_16 = 0.005395995 / ( (time+1) + 14.06333176 )
+AgeSpecificDeathRate_17 = 0.007037546 / ( (time+1) + 15.25120694 )
+AgeSpecificDeathRate_18 = 0.010578234 / ( (time+1) + 18.41389301 )
+AgeSpecificDeathRate_19 = 0.011893401 / ( (time+1) + 19.6184313 )
+AgeSpecificDeathRate_2 = 0.0044045 / ( (time+1) + 15.21124608 )
+AgeSpecificDeathRate_20 = 0.012851495 / ( (time+1) + 20.18309031 )
+AgeSpecificDeathRate_21 = 0.013793066 / ( (time+1) + 21.70163402 )
+AgeSpecificDeathRate_22 = 0.014368655 / ( (time+1) + 22.48023149 )
+AgeSpecificDeathRate_23 = 0.014958728 / ( (time+1) + 23.27976104 )
+AgeSpecificDeathRate_24 = 0.016680363 / ( (time+1) + 26.35607218 )
+AgeSpecificDeathRate_25 = 0.017080729 / ( (time+1) + 26.33887841 )
+AgeSpecificDeathRate_26 = 0.017951023 / ( (time+1) + 27.17440872 )
+AgeSpecificDeathRate_27 = 0.016824068 / ( (time+1) + 24.60565409 )
+AgeSpecificDeathRate_28 = 0.022935666 / ( (time+1) + 34.60904463 )
+AgeSpecificDeathRate_29 = 0.020699706 / ( (time+1) + 28.74787684 )
+AgeSpecificDeathRate_3 = 0.003553557 / ( (time+1) + 16.18205376 )
+AgeSpecificDeathRate_30 = 0.024204717 / ( (time+1) + 32.66648325 )
+AgeSpecificDeathRate_31 = 0.023173187 / ( (time+1) + 29.33384367 )
+AgeSpecificDeathRate_32 = 0.026838364 / ( (time+1) + 32.68224904 )
+AgeSpecificDeathRate_33 = 0.024710374 / ( (time+1) + 27.39445691 )
+AgeSpecificDeathRate_34 = 0.0285892 / ( (time+1) + 29.82372811 )
+AgeSpecificDeathRate_35 = 0.027059071 / ( (time+1) + 25.31196622 )
+AgeSpecificDeathRate_36 = 0.029679031 / ( (time+1) + 26.2671823 )
+AgeSpecificDeathRate_37 = 0.034933735 / ( (time+1) + 28.76160084 )
+AgeSpecificDeathRate_38 = 0.039469952 / ( (time+1) + 29.79075006 )
+AgeSpecificDeathRate_39 = 0.040589207 / ( (time+1) + 27.43730821 )
+AgeSpecificDeathRate_4 = 0.003593506 / ( (time+1) + 20.68529313 )
+AgeSpecificDeathRate_40 = 0.045001149 / ( (time+1) + 27.77445629 )
+AgeSpecificDeathRate_41 = 0.049702074 / ( (time+1) + 27.71514574 )
+AgeSpecificDeathRate_42 = 0.051724087 / ( (time+1) + 25.90837569 )
+AgeSpecificDeathRate_43 = 0.053944342 / ( (time+1) + 23.96241232 )
+AgeSpecificDeathRate_44 = 0.055410546 / ( (time+1) + 21.8348642 )
+AgeSpecificDeathRate_45 = 0.059503237 / ( (time+1) + 20.83022502 )
+AgeSpecificDeathRate_46 = 0.062874641 / ( (time+1) + 19.59098786 )
+AgeSpecificDeathRate_47 = 0.072821428 / ( (time+1) + 20.52929119 )
+AgeSpecificDeathRate_48 = 0.080510733 / ( (time+1) + 20.40747892 )
+AgeSpecificDeathRate_49 = 0.100442706 / ( (time+1) + 23.67354644 )
+AgeSpecificDeathRate_5 = 0.003757451 / ( (time+1) + 24.86990976 )
+AgeSpecificDeathRate_50 = 0.119814507 / ( (time+1) + 25.87233968 )
+AgeSpecificDeathRate_51 = 0.155535361 / ( (time+1) + 31.51051121 )
+AgeSpecificDeathRate_52 = 0.193583518 / ( (time+1) + 36.72224138 )
+AgeSpecificDeathRate_53 = 0.242203058 / ( (time+1) + 42.98442964 )
+AgeSpecificDeathRate_54 = 0.33196089 / ( (time+1) + 55.62371738 )
+AgeSpecificDeathRate_55 = 0.404779781 / ( (time+1) + 63.41352456 )
+AgeSpecificDeathRate_56 = 0.512261852 / ( (time+1) + 75.31271305 )
+AgeSpecificDeathRate_57 = 0.597568058 / ( (time+1) + 81.99942329 )
+AgeSpecificDeathRate_58 = 0.633790434 / ( (time+1) + 80.84306537 )
+AgeSpecificDeathRate_59 = 0.663439124 / ( (time+1) + 78.04564661 )
+AgeSpecificDeathRate_6 = 0.002217807 / ( (time+1) + 14.24928758 )
+AgeSpecificDeathRate_60 = 0.670016257 / ( (time+1) + 72.39417539 )
+AgeSpecificDeathRate_61 = 0.744956411 / ( (time+1) + 75.18924519 )
+AgeSpecificDeathRate_62 = 0.731588123 / ( (time+1) + 68.17691248 )
+AgeSpecificDeathRate_63 = 0.714317289 / ( (time+1) + 61.49871307 )
+AgeSpecificDeathRate_64 = 0.69243799 / ( (time+1) + 54.57471624 )
+AgeSpecificDeathRate_65 = 0.683644637 / ( (time+1) + 49.0494499 )
+AgeSpecificDeathRate_66 = 0.679956666 / ( (time+1) + 44.75677904 )
+AgeSpecificDeathRate_67 = 0.707319175 / ( (time+1) + 42.70592521 )
+AgeSpecificDeathRate_68 = 0.685175469 / ( (time+1) + 37.33474226 )
+AgeSpecificDeathRate_69 = 0.672667408 / ( (time+1) + 33.07521564 )
+AgeSpecificDeathRate_7 = 0.002862699 / ( (time+1) + 21.3675519 )
+AgeSpecificDeathRate_70 = 0.734386977 / ( (time+1) + 32.91804712 )
+AgeSpecificDeathRate_71 = 0.756719425 / ( (time+1) + 30.54905724 )
+AgeSpecificDeathRate_72 = 0.826632854 / ( (time+1) + 30.11868337 )
+AgeSpecificDeathRate_73 = 0.9038979 / ( (time+1) + 29.89586698 )
+AgeSpecificDeathRate_74 = 0.970520022 / ( (time+1) + 28.77466212 )
+AgeSpecificDeathRate_75 = 1.117379054 / ( (time+1) + 30.04163317 )
+AgeSpecificDeathRate_76 = 1.268153531 / ( (time+1) + 30.80969271 )
+AgeSpecificDeathRate_77 = 1.508939454 / ( (time+1) + 33.34041586 )
+AgeSpecificDeathRate_78 = 1.741642212 / ( (time+1) + 34.76204439 )
+AgeSpecificDeathRate_79 = 2.074061268 / ( (time+1) + 37.47685575 )
+AgeSpecificDeathRate_8 = 0.002811532 / ( (time+1) + 21.11015491 )
+AgeSpecificDeathRate_80 = 2.44072026 / ( (time+1) + 39.65487262 )
+AgeSpecificDeathRate_81 = 2.957927764 / ( (time+1) + 43.40538563 )
+AgeSpecificDeathRate_82 = 3.571362393 / ( (time+1) + 47.359116 )
+AgeSpecificDeathRate_83 = 3.653343235 / ( (time+1) + 42.59031139 )
+AgeSpecificDeathRate_84 = 5.246359686 / ( (time+1) + 56.9082975 )
+AgeSpecificDeathRate_85 = 0.0423128645186
+AgeSpecificDeathRate_86 = 0.0519647281548
+AgeSpecificDeathRate_87 = 0.063818250145
+AgeSpecificDeathRate_88 = 0.07837564433
+AgeSpecificDeathRate_89 = 0.0962536830795
+AgeSpecificDeathRate_9 = 0.003231454 / ( (time+1) + 25.6231454 )
+AgeSpecificDeathRate_90 = 0.118209828902
+AgeSpecificDeathRate_91 = 0.145174326863
+AgeSpecificDeathRate_92 = 0.178289617503
+AgeSpecificDeathRate_93 = 0.218958740132
+AgeSpecificDeathRate_94 = 0.268904777247
+AgeSpecificDeathRate_95 = 0.33024385865
+AgeSpecificDeathRate_96 = 0.405574818314
+AgeSpecificDeathRate_97 = 0.498089302625
+AgeSpecificDeathRate_98 = 0.611706995074
+AgeSpecificDeathRate_99 = 0.751241686684
+BirthRate = GRAPH(TIME)
+(0.00, 1.17), (7.78, 1.20), (15.6, 1.22), (23.3, 1.24), (31.1, 1.23), (38.9, 1.23), (46.7, 1.20), (54.4, 1.16), (62.2, 1.14), (70.0, 1.11)
+DiseaseDeathRate_100 = 0.95848678
+DiseaseDeathRate_65 = 0.08207
+DiseaseDeathRate_66 = 0.08426
+DiseaseDeathRate_67 = 0.08656
+DiseaseDeathRate_68 = 0.08899
+DiseaseDeathRate_69 = 0.09157
+DiseaseDeathRate_70 = 0.09429
+DiseaseDeathRate_71 = 0.09719
+DiseaseDeathRate_72 = 0.10026
+DiseaseDeathRate_73 = 0.10354
+DiseaseDeathRate_74 = 0.10704
+DiseaseDeathRate_75 = 0.11079
+DiseaseDeathRate_76 = 0.1148
+DiseaseDeathRate_77 = 0.11912
+DiseaseDeathRate_78 = 0.12378
+DiseaseDeathRate_79 = 0.12881
+DiseaseDeathRate_80 = 0.13428
+DiseaseDeathRate_81 = 0.14022
+DiseaseDeathRate_82 = 0.14672
+DiseaseDeathRate_83 = 0.15385
+DiseaseDeathRate_84 = 0.1617
+DiseaseDeathRate_85 = 0.1704
+DiseaseDeathRate_86 = 0.18009
+DiseaseDeathRate_87 = 0.19095
+DiseaseDeathRate_88 = 0.20321
+DiseaseDeathRate_89 = 0.21714
+DiseaseDeathRate_90 = 0.24013873
+DiseaseDeathRate_91 = 0.27578751
+DiseaseDeathRate_92 = 0.31672838
+DiseaseDeathRate_93 = 0.36374696
+DiseaseDeathRate_94 = 0.41774549
+DiseaseDeathRate_95 = 0.47976014
+DiseaseDeathRate_96 = 0.55098091
+DiseaseDeathRate_97 = 0.63277447
+DiseaseDeathRate_98 = 0.72671034
+DiseaseDeathRate_99 = 0.83459107
+K_100 = PrevalenceRate100/100-(1-DiseaseDeathRate_99)*AD099/Age100
+K_66 = PrevalanceRate66/100-(1-DiseaseDeathRate_65)*AD065/Age066
+K_67 = PrevalenceRate67/100-(1-DiseaseDeathRate_66)*AD066/Age067
+K_68 = PrevalenceRate68/100-(1-DiseaseDeathRate_67)*AD067/Age068
+K_69 = PrevalenceRate69/100-(1-DiseaseDeathRate_68)*AD068/Age069
+K_70 = PrevalenceRate70/100-(1-DiseaseDeathRate_69)*AD069/Age070
+K_71 = PrevalenceRate71/100-(1-DiseaseDeathRate_70)*AD070/Age071
+K_72 = PrevalenceRate72/100-(1-DiseaseDeathRate_71)*AD071/Age072
+K_73 = PrevalenceRate73/100-(1-DiseaseDeathRate_72)*AD072/Age073
+K_74 = PrevalenceRate74/100-(1-DiseaseDeathRate_73)*AD073/Age074
+K_75 = PrevalenceRate75/100-(1-DiseaseDeathRate_74)*AD074/Age075
+K_76 = PrevalenceRate076/100-(1-DiseaseDeathRate_75)*AD075/Age76
+K_77 = PrevalenceRate77/100-(1-DiseaseDeathRate_76)*AD076/Age077
+K_78 = PrevalenceRate78/100-(1-DiseaseDeathRate_77)*AD077/Age078
+K_79 = PrevalenceRate79/100-(1-DiseaseDeathRate_78)*AD078/Age079
+K_80 = PrevalenceRate80/100-(1-DiseaseDeathRate_79)*AD079/Age080
+K_81 = PrevalenceRate81/100-(1-DiseaseDeathRate_80)*AD080/Age081
+K_82 = PrevalenceRate82/100-(1-DiseaseDeathRate_81)*AD081/Age082
+K_83 = PrevalenceRate83/100-(1-DiseaseDeathRate_82)*AD082/Age083
+K_84 = PrevalenceRate84/100-(1-DiseaseDeathRate_83)*AD083/Age084
+K_85 = PrevalenceRate85/100-(1-DiseaseDeathRate_84)*AD084/Age085
+K_86 = PrevalenceRate86/100-(1-DiseaseDeathRate_85)*AD085/Age086
+K_87 = PrevalenceRate87/100-(1-DiseaseDeathRate_86)*AD086/Age087
+K_88 = PrevalenceRate88/100-(1-DiseaseDeathRate_87)*AD087/Age088
+K_89 = PrevalenceRate89/100-(1-DiseaseDeathRate_88)*AD088/Age089
+K_90 = PrevalenceRate90/100-(1-DiseaseDeathRate_89)*AD089/Age090
+K_91 = PrevalenceRate91/100-(1-DiseaseDeathRate_90)*AD090/Age091
+K_92 = PrevalenceRate92/100-(1-DiseaseDeathRate_91)*AD091/Age092
+K_93 = PrevalenceRate93/100-(1-DiseaseDeathRate_92)*AD092/Age093
+K_94 = PrevalenceRate94/100-(1-DiseaseDeathRate_93)*AD093/Age094
+K_95 = PrevalenceRate95/100-(1-DiseaseDeathRate_94)*AD094/Age095
+K_96 = PrevalenceRate96/100-(1-DiseaseDeathRate_95)*AD095/Age096
+K_97 = PrevalenceRate97/100-(1-DiseaseDeathRate_96)*AD96/Age097
+K_98 = PrevalenceRate98/100-(1-DiseaseDeathRate_97)*AD097/Age098
+K_99 = PrevalenceRate99/100-(1-DiseaseDeathRate_98)*AD098/Age099
+pomer = ADTotal/(TotalPopulationSum)
+PopulationPrediction = GRAPH(TIME)
+(0.00, 5.1e+008), (10.0, 5.1e+008), (20.0, 5.2e+008), (30.0, 5.2e+008), (40.0, 5.3e+008), (50.0, 5.2e+008), (60.0, 5.2e+008), (70.0, 5.2e+008)
+PrevalanceRate66 = 1.76486820687
+PrevalenceRate076 = 5.67821299573
+PrevalenceRate100 = 93.8015983537
+PrevalenceRate65 = 1.57022663433
+PrevalenceRate67 = 1.9836370875
+PrevalenceRate68 = 2.22952404014
+PrevalenceRate69 = 2.50589055674
+PrevalenceRate70 = 2.81651481182
+PrevalenceRate71 = 3.16564331345
+PrevalenceRate72 = 3.5580489568
+PrevalenceRate73 = 3.9990962738
+PrevalenceRate74 = 4.49481477104
+PrevalenceRate75 = 5.05198135847
+PrevalenceRate77 = 6.38207082273
+PrevalenceRate78 = 7.173177198
+PrevalenceRate79 = 8.06234724482
+PrevalenceRate80 = 9.06173670354
+PrevalenceRate81 = 10.1850081113
+PrevalenceRate82 = 11.4475175808
+PrevalenceRate83 = 12.8665247323
+PrevalenceRate84 = 14.4614286477
+PrevalenceRate85 = 16.2540330729
+PrevalenceRate86 = 18.2688444946
+PrevalenceRate87 = 20.5334071656
+PrevalenceRate88 = 23.0786796588
+PrevalenceRate89 = 25.9394580986
+PrevalenceRate90 = 29.1548518544
+PrevalenceRate91 = 32.7688182005
+PrevalenceRate92 = 36.8307632508
+PrevalenceRate93 = 41.3962173836
+PrevalenceRate94 = 46.5275943918
+PrevalenceRate95 = 52.2950447338
+PrevalenceRate96 = 58.7774145528
+PrevalenceRate97 = 66.0633235729
+PrevalenceRate98 = 74.2523766094
+PrevalenceRate99 = 83.4565252543
